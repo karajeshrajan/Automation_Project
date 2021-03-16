@@ -106,7 +106,7 @@ cronfile='/etc/cron.d/automation'
 if [ ! -f  $cronfile ]
 then
  echo "$cronfile will be created for daily script execution"
- (sudo echo '0 0 * * 0-6 root /root/Automation_Project/automation.sh >> /root/Automation_Project/cronlogs/cron.log 2>/root/Automation_Project/cronlogs/cron.err' > $cronfile)
+ (sudo echo '0 0 * * 0-6 root /root/Automation_Project/automation.sh >> /root/Automation_Project/cron.log 2>/root/Automation_Project/cron.err' > $cronfile)
  created=$?
  if [ ${created} -gt 0 ]
  then
